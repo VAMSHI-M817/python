@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Pattern</title>
+</head>
+
+<body>
+
+    <!-- CallWhiz Unified SDK v1.0.7 -->
+    <script src="https://cdn.callwhiz.ai/sdk/v1/1.0.7/sdk-voice.js"></script>
+    <script>
+        // Wait for SDK to load and initialize
+        setTimeout(async function () {
+            if (window.UnifiedSDK) {
+                await window.UnifiedSDK.init({
+                    debug: false, // Set to true for debugging
+                    api: {
+                        baseUrl: 'https://tools.callwhiz.ai'
+                    }
+                });
+                // Create widget based on type
+                window.UnifiedSDK.voice.open('ebcec3e2-9265-40d9-a64d-3406f29d3976', {
+                    "agentId": "ebcec3e2-9265-40d9-a64d-3406f29d3976",
+                    "defaultMode": "chat",
+                    "position": "bottom-right",
+                    "theme": "green",
+                    "size": "large",
+                    "allowModeSwitch": true,
+                    "autoOpen": false,
+                    "openDelay": 0,
+                    "rememberState": true,
+                    "showTypingIndicator": true,
+                    "enableSound": true,
+                    "voice": {
+                        "defaultLanguage": "en-US",
+                        "showLanguageSelector": true,
+                        "welcomeMessage": "Voice Assistant"
+                    },
+                    "chat": {
+                        "welcomeMessage": "Hello! How can I help you today?",
+                        "botName": "AI Assistant",
+                        "placeholder": "Type your message..."
+                    }
+                });
+            }
+        }, 1000);
+    </script>
+</body>
+
+</html>
