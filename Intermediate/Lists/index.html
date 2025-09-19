@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        debugger
+        let arr = [12, 12, 35, 35, 46, 12, 77, 88, 46, 46,];
+        let user = parseInt(prompt("Enter a number to remove:"));
+
+        let i = 0;
+
+        while (i < arr.length) {
+            if (arr[i] === user) {
+                arr.splice(i, 1); // remove element at index i
+                // don't increment i — next element shifts into this spot
+            } else {
+                i++; // only move forward if nothing was removed
+            }
+        }
+
+        console.log("Updated array:", arr);
+
+    </script>
+</body>
+
+</html>
