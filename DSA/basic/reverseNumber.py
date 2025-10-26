@@ -1,9 +1,9 @@
 def reverseNumber(number):
     revNum = 0
     while number > 0:
-        lastDigit = number % 10
-        revNum = (revNum * 10) + lastDigit
-        number = number // 10
+        lastdigit = number % 10
+        revNum = (revNum * 10) + lastdigit
+        number //= 10
     return revNum
 
 

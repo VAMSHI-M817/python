@@ -66,4 +66,31 @@ def sumOfNum(sum, i, n):
     sumOfNum(sum + i, i + 1, n)
 
 
-sumOfNum(sum, 1, 20)
+# sumOfNum(sum, 1, 20)
+
+# a = 0
+# b = 1
+
+
+# def fib(n):
+#     for i in range(2, n + 1):
+#         print(i)
+
+
+# fib(10)
+
+
+def fibo(n):
+    a = 0
+    b = 1
+    if n == 1:
+        return 1
+    else:
+        for _ in range(n):
+            print(a)
+            temp = a
+            a = b
+            b = temp + b
+
+
+fibo(10)

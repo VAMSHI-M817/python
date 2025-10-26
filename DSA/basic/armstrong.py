@@ -8,16 +8,16 @@ digits equals the number itself.
 
 
 def armStrong(number):
-    original = number
-    result = 0
+    og = number
     k = len(str(number))
+    res = 0
     while number > 0:
-        lastDigit = number % 10
-        sum = lastDigit**k
-        result += sum
-        number = number // 10
-    return result == original
+        lastdigit = number % 10
+        sum = lastdigit**k
+        res += sum
+        number //= 10
+    return res == og
 
 
-res = armStrong(12345)
+res = armStrong(930284)
 print(res)

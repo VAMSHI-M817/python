@@ -7,43 +7,30 @@
 # import math
 
 
-# class GCD:
-#     def __init__(self, a, b):
-#         self.a = a
-#         self.b = b
+class GCD:
+    def __init__(self, a, b):
+        self.a = a
+        self.b = b
 
-#     def GreatestCommonDivisor(self):
-#         gcd = []
-#         res = f" {(self.a,self.b)} GCD is : "
-#         for i in range(1, min(self.a, self.b) + 1):
-#             if self.a % i == 0 and self.b % i == 0:
-#                 gcd.append(i)
-#         return res, max(gcd)
+    def GreatestCommonDivisor(self):
+        gcd = []
+        res = f" {(self.a,self.b)} GCD is : "
+        for i in range(1, min(self.a, self.b) + 1):
+            if self.a % i == 0 and self.b % i == 0:
+                gcd.append(i)
+        return res, max(gcd)
 
-#     # print(math.gcd(198, 252))
-
-#     def optimalGCD(self):
-#         a = self.a
-#         b = self.b
-#         while b != 0:
-#             temp = b
-#             b = a % b
-#             a = temp
-#             # print(a, b)
-#         return a
+    def optimalGCD(self):
+        a = self.a
+        b = self.b
+        while b != 0:
+            temp = b
+            b = a % b
+            a = temp
+            # print(a, b)
+        return a
 
 
-# results = GCD(258, 196)
-# # print(results.GreatestCommonDivisor())
-# print(results.optimalGCD())
-
-
-def pritn():
-    count = 0
-    print("Hello")
-    count += 1
-    pritn()
-    print(count)
-
-
-pritn()
+results = GCD(258, 196)
+print(results.GreatestCommonDivisor())
+print(results.optimalGCD())

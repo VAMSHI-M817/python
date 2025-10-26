@@ -26,5 +26,4 @@ def optimalDivisor(number):
 
 
 Res = optimalDivisor(36)
-Res.sort()
 print(Res)

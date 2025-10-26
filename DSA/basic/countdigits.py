@@ -6,6 +6,7 @@ def countDigits(n):
     while n > 0:
         n //= 10
         count += 1
+
     return count
 
 
