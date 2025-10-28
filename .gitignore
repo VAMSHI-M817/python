@@ -1,7 +1,7 @@
 /.env
 /.env.pgvector
 /AGENT_CALLING_ARCHITECTURE.md
-/CALLWHIZ_UI_ARCHITECTURE.md
+/CALLWHIZ_UI_ARCHITECTURE_GUIDE.md
 /firebase_creds.json
 /google_app_creds.json
 /settings.json
