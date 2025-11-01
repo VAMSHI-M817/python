@@ -2,24 +2,26 @@ arr1 = [1, 2, 3, 0, 0, 0]
 arr2 = [2, 5, 6]
 
 
-# def sec(left,right):
-#     res = []
-#     i=j=0
-#     while i < len(left) and j < len(right):
-#         if left[i] < right[j]:
-#             if len(res) == 0 or left[i] != res[-1]:
-#                 res.append(left[i])
-#                 i +=1
-#         else:
-#             if len(res) == 0 or left[j] != res[-1]:
-#                 res.append(right[j])
-#             j+=1
+def sec(left, right):
+    res = []
+    i = j = 0
+    while i < len(left) and j < len(right):
+        if left[i] < right[j]:
+            if len(res) == 0 or left[i] != res[-1]:
+                res.append(left[i])
+            i += 1
+        else:
+            if len(res) == 0 or left[j] != res[-1]:
+                res.append(right[j])
+            j += 1
 
-#     res.extend(left[i:])
-#     res.extend(right[j:])
+    res.extend(left[i:])
+    res.extend(right[j:])
 
-#     return res
-# print((sec(arr1,arr2)))
+    return res
+
+
+print((sec(arr1, arr2)))
 
 
 def func(nums1, nums2):
